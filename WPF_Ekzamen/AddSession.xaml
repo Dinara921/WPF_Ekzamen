@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF_Ekzamen.AddSession"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ekzamen"
+        mc:Ignorable="d"
+        Title="AddSession" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/IMG_3668.JPG"/>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="456" Width="290">
+            <Label Content="" Foreground="White"/>
+            <Label Content="Зал" Foreground="White"/>
+            <ComboBox x:Name="cmb_Hall" SelectedIndex="0" DisplayMemberPath="name" SelectedValuePath="id" Margin="0,5,0,5"/>
+            <Label Content="Время:" Foreground="White"/>
+            <TextBox x:Name="tb_time"/>
+            <Label Content="Фильм:" Foreground="White"/>
+            <ComboBox x:Name="cmb_Film" SelectedIndex="0" DisplayMemberPath="name" SelectedValuePath="id"/>
+            <Label Content="Взрослый билет:" Foreground="White"/>
+            <TextBox x:Name="tb_priceAdult"/>
+            <Label Content="Студенческий билет:" Foreground="White"/>
+            <TextBox x:Name="tb_priceStudent"/>
+            <Label Content="Детский билет:" Foreground="White"/>
+            <TextBox x:Name="tb_priceChild"/>
+        </StackPanel>
+
+        <Button Content="Назад" Width="100" Height="30" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110,0,0,35" Click="Button_Click"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,235,40" Width="325" Height="60">
+            <Button Content="Добавить" Height="30" Width="85" Margin="20,0,110,0" Click="Button_Add" FontSize="14"/>
+            <Button Content="Изменить" Height="30" Width="85" Margin="0,0,20,0" Click="Button_Change" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Window>

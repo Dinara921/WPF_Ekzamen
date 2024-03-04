@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPF_Ekzamen.ReturnTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ekzamen"
+        mc:Ignorable="d"
+        Title="ReturnTicket" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/IMG_3668.JPG"/>
+        </Grid.Background>
+        <ListBox x:Name="TicketListBox" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="125,29,115,95"/>
+        <Button Content="Возврат выбранного билета" Click="ReturnButton_Click" Margin="530,354,20,25" FontSize="16"/>
+        <Button Content="Назад" Click="Button_Click" Margin="40,359,545,20" FontSize="18"/>
+    </Grid>
+</Window>

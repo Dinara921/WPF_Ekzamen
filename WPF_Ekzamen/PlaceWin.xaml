@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF_Ekzamen.PlaceWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ekzamen"
+        mc:Ignorable="d"
+        Title="PlaceWin" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/IMG_3668.JPG"/>
+        </Grid.Background>
+
+        <ScrollViewer>
+            <WrapPanel x:Name="PlacesWrapPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </ScrollViewer>
+        <Button Content="Назад" Width="100" Height="30" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,20" Click="Button_back"/>
+
+    </Grid>
+</Window>

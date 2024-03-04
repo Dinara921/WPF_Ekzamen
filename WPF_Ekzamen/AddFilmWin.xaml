@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPF_Ekzamen.AddFilmWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ekzamen"
+        mc:Ignorable="d"
+        Title="AddFilmWin" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/IMG_3668.JPG"/>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="346" Width="290">
+            <Label Content="Название:" Foreground="White"/>
+            <TextBox x:Name="tb_name" Height="29"/>
+            <Label Content="Описание:" Foreground="White"/>
+            <TextBox x:Name="tb_description" Height="30"/>
+            <Label Content="Жанр:" Foreground="White"/>
+            <TextBox x:Name="tb_genre" Height="31"/>
+            <Label Content="Продолжительность:" Foreground="White"/>
+            <TextBox x:Name="tb_duration" Height="32"/>
+            <Label Content="Постер:" Foreground="White"/>
+            <TextBox x:Name="tb_poster" Height="28"/>
+        </StackPanel>
+
+        <Button Content="Назад" Width="100" Height="30" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110,0,0,35" Click="Button_Click"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,235,40" Width="325" Height="60">
+            <Button Content="Добавить" Height="30" Width="85" Margin="20,0,110,0" Click="Button_Add" FontSize="14"/>
+            <Button Content="Изменить" Height="30" Width="85" Margin="0,0,20,0" Click="Button_Change" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Window>

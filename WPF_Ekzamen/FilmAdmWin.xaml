@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF_Ekzamen.FilmAdmWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ekzamen"
+        mc:Ignorable="d"
+        Title="FilmAdmWin" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/IMG_3668.JPG"/>
+        </Grid.Background>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50,0,0">
+            <TextBox x:Name="Search_tb" Width="200" Height="30" FontSize="16" Margin="0,0,10,0"/>
+            <Button Content="Поиск" Width="100" Height="30" FontSize="16" Margin="0,0,110,0" Click="Button_Search"/>
+            <Button Content="Добавить" Width="100" Height="30"  FontSize="16" Margin="0,0,20,0" Click="Button_Add" />
+            <Button Content="Изменить" Width="100" Height="30"  FontSize="16" Margin="0,0,20,0" Click="Button_Change" />
+            <Button Content="Удалить" Width="100" Height="30"   FontSize="16" Margin="0,0,20,0" Click="Button_Delete" />
+        </StackPanel>
+
+        <DataGrid x:Name="FilmsDataGrid" SelectionChanged="FilmDataGrid_SelectionChanged" AutoGenerateColumns="False" Margin="10,99,15,60">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding id}" />
+                <DataGridTextColumn Header="Название" Binding="{Binding name}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Жанр" Binding="{Binding genre}" />
+                <DataGridTextColumn Header="Длительность" Binding="{Binding duration}" />
+                <DataGridTemplateColumn Header="Постер">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding poster}" Width="100" Height="150"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Назад" Width="100" Height="30" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,685,20" Click="Button_back"/>
+
+    </Grid>
+</Window>
