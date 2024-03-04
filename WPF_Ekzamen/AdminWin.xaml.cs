@@ -31,7 +31,7 @@ namespace WPF_Ekzamen
         public static decimal PriceAdult { get; set; }
         public static decimal PriceStudent { get; set; }
         public static decimal PriceChild { get; set; }
-        public static decimal p;
+
         private AddSession curAddSession;
         public AdminWin()
         {
